@@ -24,6 +24,13 @@ class SwiftTests: XCTestCase
         XCTAssertTrue(type(of: x2) != Int?.self)
         XCTAssertTrue(type(of: x2) != Int!.self)
     }
+    
+    func testNestedIUO() {
+        let x3: [Int!] = [f()]
+        XCTAssertTrue(type(of: x3) == [Int!].self)
+        XCTAssertTrue(type(of: x3) == [Int?].self)
+        XCTAssertTrue(type(of: x3) != [Int].self)
+    }
 }
 
 TestBuilder.run(tests: SwiftTests()) { description, lineNumber in
