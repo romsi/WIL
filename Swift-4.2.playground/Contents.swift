@@ -31,6 +31,15 @@ class SwiftTests: XCTestCase
         XCTAssertTrue(type(of: x3) == [Int?].self)
         XCTAssertTrue(type(of: x3) != [Int].self)
     }
+    
+    func testCaseIterable() {
+        enum Iteration: CaseIterable {
+            case singapore
+            case paris
+            case tokyo
+        }
+        XCTAssertEqual(Iteration.allCases, [.singapore, .paris, .tokyo])
+    }
 }
 
 TestBuilder.run(tests: SwiftTests()) { description, lineNumber in
