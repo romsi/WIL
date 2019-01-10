@@ -37,6 +37,7 @@ class SwiftTests: XCTestCase
             case singapore
             case paris
             case tokyo
+            // case disney(city: City) # - error: type 'City' does not conform to protocol 'CaseIterable'
         }
         XCTAssertEqual(Iteration.allCases, [.singapore, .paris, .tokyo])
     }
