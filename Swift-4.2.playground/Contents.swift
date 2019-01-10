@@ -7,9 +7,13 @@ class SwiftTests: XCTestCase
         super.setUp()
     }
     
-    func testExample() {
-        var ok = "ok"
-        XCTAssertTrue(ok == "ok")
+    func testTypeOfImplicityUnwrappedOptional() {
+        func f() -> Int! {
+            return 1
+        }
+        let x1 = f()
+        XCTAssertTrue(type(of: x1) == Int?.self)
+        XCTAssertTrue(type(of: x1) == Int!.self)
     }
 }
 
