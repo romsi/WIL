@@ -41,6 +41,12 @@ class SwiftTests: XCTestCase
         }
         XCTAssertEqual(Iteration.allCases, [.singapore, .paris, .tokyo])
     }
+    
+    func testNewRemoveAllFunction() {
+        var name = ["John", "William", "Michael", "Gary", "Liam"]
+        name.removeAll { $0.hasSuffix("am") }
+        XCTAssertEqual(name, ["John", "Michael", "Gary"])
+    }
 }
 
 TestBuilder.run(tests: SwiftTests()) { description, lineNumber in
