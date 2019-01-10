@@ -7,13 +7,22 @@ class SwiftTests: XCTestCase
         super.setUp()
     }
     
+    func f() -> Int! {
+        return 1
+    }
+    
     func testTypeOfImplicityUnwrappedOptional() {
-        func f() -> Int! {
-            return 1
-        }
         let x1 = f()
         XCTAssertTrue(type(of: x1) == Int?.self)
         XCTAssertTrue(type(of: x1) == Int!.self)
+        XCTAssertTrue(type(of: x1) != Int.self)
+    }
+    
+    func testNonOptionalTypeUsingImplicityUnwrappedOptional() {
+        let x2: Int = f()
+        XCTAssertTrue(type(of: x2) == Int.self)
+        XCTAssertTrue(type(of: x2) != Int?.self)
+        XCTAssertTrue(type(of: x2) != Int!.self)
     }
 }
 
