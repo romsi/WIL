@@ -47,6 +47,12 @@ class SwiftTests: XCTestCase
         name.removeAll { $0.hasSuffix("am") }
         XCTAssertEqual(name, ["John", "Michael", "Gary"])
     }
+    
+    func testBoolToggle() {
+        var enabled = true
+        enabled.toggle()
+        XCTAssertTrue(enabled == false)
+    }
 }
 
 TestBuilder.run(tests: SwiftTests()) { description, lineNumber in
