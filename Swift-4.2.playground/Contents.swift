@@ -60,6 +60,18 @@ class SwiftTests: XCTestCase
         XCTAssertEqual(numberSequence.lastIndex(where: { $0 > 15} ), 8)
         XCTAssertEqual(numberSequence.lastIndex(of: 10), 6)
     }
+    
+    func testSynthetizingEquatableConformance() {
+        struct User: Equatable {
+            var name: String
+            var email: String
+            var hasSuperPower: Bool
+        }
+        XCTAssertEqual(
+            User(name: "Romain", email: "romain.asnar@gmail.com", hasSuperPower: true),
+            User(name: "Romain", email: "romain.asnar@gmail.com", hasSuperPower: true)
+        )
+    }
 }
 
 TestBuilder.run(tests: SwiftTests()) { description, lineNumber in
