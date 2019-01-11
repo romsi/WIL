@@ -53,6 +53,13 @@ class SwiftTests: XCTestCase
         enabled.toggle()
         XCTAssertTrue(enabled == false)
     }
+    
+    func testNewCollectionLastMethod() {
+        let numberSequence = [20, 30, 10, 40, 20, 30, 10, 40, 20]
+        XCTAssertEqual(numberSequence.last { $0 > 20 }, 40)
+        XCTAssertEqual(numberSequence.lastIndex(where: { $0 > 15} ), 8)
+        XCTAssertEqual(numberSequence.lastIndex(of: 10), 6)
+    }
 }
 
 TestBuilder.run(tests: SwiftTests()) { description, lineNumber in
