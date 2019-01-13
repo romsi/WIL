@@ -5,10 +5,17 @@
 
 Stay ahead of the best programming practices.
 
+- [Installation](#installation)
 - [iOS](#ios)
 	- [Swift 4.2](#swift-4.2)
+- [Requirements](#requirements)
 
-# iOS
+## Installation
+
+1. [Download the Xcode 10.1 release](https://developer.apple.com/xcode/download/).
+2. Clone this repository.
+
+## iOS
 
 Since iOS 4, I'm building iPhone and iPad apps. Major changes happen since then: ARC, storyboards, Swift and more. As an iOS engineer, I have to master the language, frameworks and the ecosystem.
 
@@ -23,7 +30,7 @@ My main regular source of information are:
 
 I'm mostly using Swift playground to try new things. In my opinion, [Swift playground is the best tool to quickly get feedbacks](https://medium.com/night-shift/spike-and-stabilize-only-works-if-afb3549426db).
 
-## Swift 4.2
+### Swift 4.2
 
 Swift 4.2 is now officially released! Swift 4.2 builds on the strengths of Swift 4, delivering faster compile times, improving the debugging experience, updating the standard library, and converging on binary compatibility.
 
@@ -37,3 +44,9 @@ I tried Swift 4.2 new features in [Swift-4.2.playground](/Swift-4.2.playground) 
 -  [SE-0204](https://github.com/apple/swift-evolution/blob/master/proposals/0204-add-last-methods.md): Add last(where:) and lastIndex(where:) Methods
 -  [SE-0197](https://github.com/apple/swift-evolution/blob/master/proposals/0197-remove-where.md): Adding in-place removeAll(where:) to the Standard Library
 -  [SE-0185](https://github.com/apple/swift-evolution/blob/master/proposals/0185-synthesize-equatable-hashable.md): Synthesizing Equatable and Hashable conformance
+
+## Requirements
+
+- iOS 11.0+
+- Xcode 10.1+
+- Swift 4.2+
