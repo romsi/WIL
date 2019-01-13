@@ -1,4 +1,4 @@
-# Romain ASNAR Manifesto
+# Romain ASNAR's Manifesto
 
 Romain's mission is to bring professionalism and excellence to any project.
 
@@ -6,10 +6,10 @@ Romain's mission is to bring professionalism and excellence to any project.
 
 Romain ASNAR Manifesto is based on [Agile Manifesto](http://agilemanifesto.org) and [Software Craftsmanship Manifesto](http://manifesto.softwarecraftsmanship.org).
 
-**Measures and tests** over brainstormings and meetings
-**Individuals and interactions** over processes and tools
-**Responding to change** over following a plan
-**Taking responsibility** over getting approvals
+1. **Measures and tests** over brainstormings and meetings
+2. **Individuals and interactions** over processes and tools
+3. **Responding to change** over following a plan
+4. **Taking responsibility** over getting approvals
 
 We value the items on the left more.
 
