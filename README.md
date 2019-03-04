@@ -36,7 +36,7 @@ Swift 4.2 is now officially released! Swift 4.2 builds on the strengths of Swift
 
 You can watch a quick overview of it by watching the [WWDC 2018: What’s New in Swift presentation](https://developer.apple.com/videos/play/wwdc2018/401/), and try out some of the new features in [Ole Begemann playground](https://github.com/ole/whats-new-in-swift-4-2).
 
-I tried Swift 4.2 new features in [Swift-4.2.playground](/Swift-4.2.playground) using `XCTest`:
+I tried Swift 4.2 new features in [WIL.playground](/WIL.playground) using `XCTest`:
 
 - [SE-0054](https://github.com/apple/swift-evolution/blob/master/proposals/0054-abolish-iuo.md): Abolish ImplicitlyUnwrappedOptional type
 - [SE-0194](https://github.com/apple/swift-evolution/blob/master/proposals/0194-derived-collection-of-enum-cases.md "Derived Collection of Enum Cases"): Derived Collection of Enum Cases
