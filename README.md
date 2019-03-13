@@ -7,7 +7,8 @@ Stay ahead of the best programming practices.
 
 - [Installation](#installation)
 - [iOS](#ios)
-	- [Swift 4.2](#swift-4.2)
+	- [Language Features](#language-features)
+		- [Swift 4.2](#swift-4.2)
 	- [Prototyping](#prototyping)
 		- [Xcode Playgrounds](#xcode-playgrounds)
 	
@@ -33,7 +34,15 @@ My main regular source of information are:
 
 I'm mostly using Swift playground to try new things. In my opinion, [Swift playground is the best tool to quickly get feedbacks](https://medium.com/night-shift/spike-and-stabilize-only-works-if-afb3549426db).
 
-### Swift 4.2
+### Language features
+
+Apple support two languages for building iOS apps. Objective-C is a general-purpose, object-oriented programming language that adds Smalltalk-style messaging to the C programming language. Swift is a general-purpose, multi-paradigm, compiled programming language and designed to work with Apple's Cocoa and Cocoa Touch frameworks.
+
+Both are maintained and Swift has been promoted by Apple engineering teams for years now.
+
+Mastering the language is the basics to build iOS apps.
+
+#### Swift 4.2
 
 Swift 4.2 is now officially released! Swift 4.2 builds on the strengths of Swift 4, delivering faster compile times, improving the debugging experience, updating the standard library, and converging on binary compatibility.
 
