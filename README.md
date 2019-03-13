@@ -69,7 +69,7 @@ I personally use it to enforce my understanding of a specific business requireme
 
 Trying out new frameworks, SDKs and architecture with Xcode Plagrounds become much more easier as well. I'm also using it to build spikes and stabilize it later. Unfortunately, using storyboards in playrgounds is a bit difficult.
 
-Checkout my [Playground.playground](/Swift.playground) file and my [Medium article](https://medium.com/@romsi94/storyboards-in-xcode-playgrounds-are-a-pain-in-the-a-343c7b3bab0c) to know more about how did I achieve it.
+Checkout my [Playground.playground](/Swift.playground) file and my [Medium article about adding storyboards in Xcode playgrounds](https://medium.com/@romsi94/storyboards-in-xcode-playgrounds-are-a-pain-in-the-a-343c7b3bab0c).
 
 *Note: Run `make` to compile storyboards before running the playground*
 
