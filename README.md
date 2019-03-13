@@ -8,7 +8,9 @@ Stay ahead of the best programming practices.
 - [Installation](#installation)
 - [iOS](#ios)
 	- [Swift 4.2](#swift-4.2)
-	- [Xcode Playgrounds](#xcode-playgrounds)
+	- [Prototyping](#prototyping)
+		- [Xcode Playgrounds](#xcode-playgrounds)
+	
 - [Requirements](#requirements)
 
 ## Installation
@@ -46,15 +48,28 @@ I tried Swift 4.2 new features in [Swift.playground](/Swift.playground) using `X
 -  [SE-0197](https://github.com/apple/swift-evolution/blob/master/proposals/0197-remove-where.md): Adding in-place removeAll(where:) to the Standard Library
 -  [SE-0185](https://github.com/apple/swift-evolution/blob/master/proposals/0185-synthesize-equatable-hashable.md): Synthesizing Equatable and Hashable conformance
 
-### Xcode Playgrounds
+### Prototyping
+
+Prototype to learn. Prototypes are designed to answer just a few questions, so they are much cheaper and faster to develop than applications that go into production. Prototypes are designed to answer just a few questions, we can build many different prototypes to test a specific aspect:
+
+- Architecture
+- New functionality in an existing system
+- Third-party tools or components
+- User interface design
+
+Let's try tools that made easy to build prototypes.
+
+#### Xcode Playgrounds
 
 [Interactive playgrounds (or Xcode playgrounds) help you to quickly prototype and build your applications, and simply provide another great way to interact with your code.](https://developer.apple.com/swift/blog/?id=35)
 
 Recently during the WWDC 2018, [Apple team presents major advancements in Xcode playgrounds](https://developer.apple.com/videos/play/wwdc2018/402/). Learn advanced tips and techniques, hear about new and often overlooked workflows, and rediscover the tools provided when coding in playgrounds.
 
-My main focus is about using storyboards in playgrounds. I personally use it to enforce my understanding of a specific business requirement by quickly doing a demo to the product owner. It is fully isolated from my production code and I can import my production code to quickly improve the experience. It also could be use to build spikes and stabilize it later.
+I personally use it to enforce my understanding of a specific business requirement by quickly doing a demo to the product owner. It is fully isolated from my production code and I can import my production code to quickly improve the experience.
 
-Unfortunately, using storyboards in playrgounds is a bit difficult. Checkout my [Playground.playground](/Swift.playground) file and my [Medium article](https://medium.com/@romsi94/storyboards-in-xcode-playgrounds-are-a-pain-in-the-a-343c7b3bab0c) to know more about how did I achieve it.
+Trying out new frameworks, SDKs and architecture with Xcode Plagrounds become much more easier as well. I'm also using it to build spikes and stabilize it later. Unfortunately, using storyboards in playrgounds is a bit difficult.
+
+Checkout my [Playground.playground](/Swift.playground) file and my [Medium article](https://medium.com/@romsi94/storyboards-in-xcode-playgrounds-are-a-pain-in-the-a-343c7b3bab0c) to know more about how did I achieve it.
 
 *Note: Run `make` to compile storyboards before running the playground*
 
