@@ -1,7 +1,7 @@
 IB_TOOL=ibtool
 PROJECT_EXTENSION=playground
-PLAYGROUND_PATH=Playground.$(PROJECT_EXTENSION)/Resources
-VPATH=$(PLAYGROUND_PATH)
+PROTOTYPING_PATH=Prototyping.$(PROJECT_EXTENSION)/Resources
+VPATH=$(PROTOTYPING_PATH)
 
 %.storyboardc : %.storyboard
 	$(IB_TOOL) --compile $(shell dirname $^)/$@ $^
@@ -9,6 +9,6 @@ VPATH=$(PLAYGROUND_PATH)
 all: Main.storyboardc
 
 clean:
-	rm -rf $(PLAYGROUND_PATH)/*.storyboardc
+	rm -rf $(PROTOTYPING_PATH)/*.storyboardc
 
 .PHONY: clean
