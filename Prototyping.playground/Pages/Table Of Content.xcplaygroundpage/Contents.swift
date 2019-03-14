@@ -13,4 +13,6 @@
  Prototype to learn.
  
  [Interactive playgrounds (or Xcode playgrounds) help you to quickly prototype and build your applications, and simply provide another great way to interact with your code](https://developer.apple.com/swift/blog/?id=35).
+ 
+ Recently during the WWDC 2018, [Apple team presents major advancements in Xcode playgrounds](https://developer.apple.com/videos/play/wwdc2018/402/). Learn advanced tips and techniques, hear about new and often overlooked workflows, and rediscover the tools provided when coding in playgrounds.
 */
