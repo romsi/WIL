@@ -11,7 +11,8 @@ Stay ahead of the best programming practices.
 		- [Swift 4.2](#swift-4.2)
 	- [Prototyping](#prototyping)
 		- [User Interface](#user-interface)
-	
+- [Design Pattern](#design-pattern)
+	- [Visitor](#visitor)
 - [Requirements](#requirements)
 
 ## Installation
@@ -79,6 +80,46 @@ Apple describes Xcode Playgrounds as follow:
 Recently during the WWDC 2018, [Apple team presents major advancements in Xcode playgrounds](https://developer.apple.com/videos/play/wwdc2018/402/). Learn advanced tips and techniques, hear about new and often overlooked workflows, and rediscover the tools provided when coding in playgrounds.
 
 Check out the `User Intrerface` page on my [Prototyping playground file](/Prototyping.playground) where I use storyboards and Xcode playgrounds to build prototypes of my personal app.
+
+## Design Pattern
+
+> [A Design Pattern is a named canonical form for a combination of software structures and procedures that have proven to be useful over the years.](https://blog.cleancoder.com/uncle-bob/2014/06/30/ALittleAboutPatterns.html) — Robert C. Martin
+ 
+Design patterns are solutions to common software problems. One of the most impactful book written on software is called Design Patterns: Elements of Reusable Object-Oriented Software. It describes 23 sofware design patterns such as:
+ 
+- Abstract Factory
+- Builder
+- Factory Method
+- Prototype
+- Singleton
+- Adapter
+- Bridge
+- Composite
+- Decorator
+- Facade
+- Flyweight
+- Proxy
+- Chain of Responsibility
+- Command
+- Interpreter
+- Iterator
+- Mediator
+- Memento
+- Observer
+- State
+- Strategy
+- Template Method
+- Visitor
+ 
+Mastering the 23 software design patterns described in the book called Design Patterns: Elements of Reusable Object-Oriented Software, is so much important because it is the foundation of most of the new software design patterns.
+
+### Visitor
+
+[The visitor design pattern is a way of separating an algorithm from an object structure on which it operates. A practical result of this separation is the ability to add new operations to existent object structures without modifying the structures. It is one way to follow the open/closed principle.](https://en.wikipedia.org/wiki/Visitor_pattern)
+ 
+The Visitor pattern is often maligned as too complex. In fact, it allows you to separate things that change for different reasons.
+
+Check out the `Visitor` page on my [Design Pattern playground file](/Design%20Pattern.playground) where I implement the visitor design pattern with a concrete case that follow SOLID principles.
 
 ## Requirements
 
