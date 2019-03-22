@@ -10,7 +10,7 @@ Stay ahead of the best programming practices.
 	- [Language Features](#language-features)
 		- [Swift 4.2](#swift-4.2)
 	- [Prototyping](#prototyping)
-		- [Xcode Playgrounds](#xcode-playgrounds)
+		- [User Interface](#user-interface)
 	
 - [Requirements](#requirements)
 
@@ -68,19 +68,17 @@ Prototype to learn. Prototypes are designed to answer just a few questions, so t
 
 Let's try tools that made easy to build prototypes.
 
-#### Xcode Playgrounds
+#### User Interface
 
-[Interactive playgrounds (or Xcode playgrounds) help you to quickly prototype and build your applications, and simply provide another great way to interact with your code.](https://developer.apple.com/swift/blog/?id=35)
+Prototyping user interface enables the three amigos Product Owner, Developer and Tester to learn by quickly getting feedbacks. Storyboard is a great tool to create views by dragging/dropping elements into a view and mixed with Xcode Playgrounds, it allows developers to quickly run code and live updating views. Live coding while the three amigos discuss about user story, can dramatically reduce the feedback loop.
+
+Apple describes Xcode Playgrounds as follow:
+
+> [Interactive playgrounds (or Xcode playgrounds) help you to quickly prototype and build your applications, and simply provide another great way to interact with your code.](https://developer.apple.com/swift/blog/?id=35)
 
 Recently during the WWDC 2018, [Apple team presents major advancements in Xcode playgrounds](https://developer.apple.com/videos/play/wwdc2018/402/). Learn advanced tips and techniques, hear about new and often overlooked workflows, and rediscover the tools provided when coding in playgrounds.
 
-I personally use it to enforce my understanding of a specific business requirement by quickly doing a demo to the product owner. It is fully isolated from my production code and I can import my production code to quickly improve the experience.
-
-Trying out new frameworks, SDKs and architecture with Xcode Plagrounds become much more easier as well. I'm also using it to build spikes and stabilize it later. Unfortunately, using storyboards in playrgounds is a bit difficult.
-
-Checkout my [Prototyping.playground](/Prototyping.playground) file and my [Medium article about adding storyboards in Xcode playgrounds](https://medium.com/@romsi94/storyboards-in-xcode-playgrounds-are-a-pain-in-the-a-343c7b3bab0c).
-
-*Note: Run `make` to compile storyboards before running the playground*
+Check out the `User Intrerface` page on my [Prototyping playground file](/Prototyping.playground) where I use storyboards and Xcode playgrounds to build prototypes of my personal app.
 
 ## Requirements
 
