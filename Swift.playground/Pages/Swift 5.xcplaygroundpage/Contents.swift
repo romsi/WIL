@@ -29,6 +29,16 @@ class Swift5Tests: XCTestCase {
             "My name is \\Romain."
         )
     }
+/*:
+ Interpolation works a bit differently.
+ */
+    func testInterpolationWithNewStringDelimiter() {
+        let romain = "Romain"
+        XCTAssertEqual(
+            #"My name is \#(romain)."#,
+            "My name is Romain."
+        )
+    }
 }
 
 TestBuilder.run(tests: Swift5Tests()) { description, lineNumber in
