@@ -43,6 +43,31 @@ Both are maintained and Swift has been promoted by Apple engineering teams for y
 
 Mastering the language is the basics to build iOS apps.
 
+#### Swift 5
+ 
+Swift 5 is now officially released!
+
+Swift 5 is a major milestone in the evolution of the language. Thanks to ABI stability, the Swift runtime is now included in current and future versions of Apple’s platform operating systems: macOS, iOS, tvOS and watchOS. Swift 5 also introduces new capabilities that are building blocks for future versions, including a reimplementation of String, enforcement of exclusive access to memory during runtime, new data types, and support for dynamically callable types.
+
+You can try out some of the new features in [Paul Hudson's playground](https://github.com/twostraws/whats-new-in-swift-5-0).
+
+I tried Swift 5 new features in [Swift.playground](/Swift.playground) using `XCTest`:
+
+- [SE-0200](https://github.com/apple/swift-evolution/blob/master/proposals/0200-raw-string-escaping.md): Enhancing String Literals Delimiters to Support Raw Text
+- [SE-0215](https://github.com/apple/swift-evolution/blob/master/proposals/0215-conform-never-to-hashable-and-equatable.md): Conform Never to Equatable and Hashable
+- [SE-0218](https://github.com/apple/swift-evolution/blob/master/proposals/0218-introduce-compact-map-values.md): Introduce compactMapValues to Dictionary
+- [SE-0225](https://github.com/apple/swift-evolution/blob/master/proposals/0225-binaryinteger-iseven-isodd-ismultiple.md): Adding isMultiple to BinaryInteger
+- [SE-0228](https://github.com/apple/swift-evolution/blob/master/proposals/0228-fix-expressiblebystringinterpolation.md): Fix ExpressibleByStringInterpolation
+- [SE-0232](https://github.com/apple/swift-evolution/blob/master/proposals/0232-remove-customization-points.md): Remove Some Customization Points from the Standard Library’s Collection Hierarchy
+- [SE-0235](https://github.com/apple/swift-evolution/blob/master/proposals/0235-add-result.md): Add Result to the Standard Library
+- [SE-0239](https://github.com/apple/swift-evolution/blob/master/proposals/0239-codable-range.md): Add Codable conformance to Range types
+- [SE-0192](https://github.com/apple/swift-evolution/blob/master/proposals/0192-non-exhaustive-enums.md): Handling Future Enum Cases
+- [SE-0213](https://github.com/apple/swift-evolution/blob/master/proposals/0213-literal-init-via-coercion.md): Literal initialization via coercion
+- [SE-0216](https://github.com/apple/swift-evolution/blob/master/proposals/0216-dynamic-callable.md): Introduce user-defined dynamically “callable” types
+- [SE-0224](https://github.com/apple/swift-evolution/blob/master/proposals/0224-ifswift-lessthan-operator.md): Support ‘less than’ operator in compilation conditions
+- [SE-0227](https://github.com/apple/swift-evolution/blob/master/proposals/0227-identity-keypath.md): Identity key path
+- [SE-0230](https://github.com/apple/swift-evolution/blob/master/proposals/0230-flatten-optional-try.md): Flatten nested optionals resulting from ‘try?’
+
 #### Swift 4.2
 
 Swift 4.2 is now officially released! Swift 4.2 builds on the strengths of Swift 4, delivering faster compile times, improving the debugging experience, updating the standard library, and converging on binary compatibility.
