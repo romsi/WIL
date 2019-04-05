@@ -39,6 +39,15 @@ class Swift5Tests: XCTestCase {
             "My name is Romain."
         )
     }
+/*:
+ In very extrem rare case, the string could be misinterpreted by using a new delimiter and double quote in the string itself.
+ */
+    func testStringMisinterpretation() {
+        XCTAssertEqual(
+            ##""The best iOS developers work for Night Shift"#BeSolid"##,
+            "\"The best iOS developers work for Night Shift\"#BeSolid"
+        )
+    }
 }
 
 TestBuilder.run(tests: Swift5Tests()) { description, lineNumber in
