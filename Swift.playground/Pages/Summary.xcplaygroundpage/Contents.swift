@@ -2,6 +2,18 @@
  # WIL
 
  Stay ahead of the best programming practices. Since iOS 4 major changes happen: ARC, storyboards, Swift and more. As an iOS engineer, we have to master the language, frameworks and the ecosystem.
+ 
+ ## Swift 5
+ 
+ Swift 5 is now officially released!
+ 
+ Swift 5 is a major milestone in the evolution of the language. Thanks to ABI stability, the Swift runtime is now included in current and future versions of Apple’s platform operating systems: macOS, iOS, tvOS and watchOS. Swift 5 also introduces new capabilities that are building blocks for future versions, including a reimplementation of String, enforcement of exclusive access to memory during runtime, new data types, and support for dynamically callable types.
+ 
+ You can try out some of the new features in [Paul Hudson's playground](https://github.com/twostraws/whats-new-in-swift-5-0).
+ 
+ A quick overview of the new [Swift 5 features](Swift%205) using `XCTest`:
+ 
+ - [SE-0200](https://github.com/apple/swift-evolution/blob/master/proposals/0200-raw-string-escaping.md): Enhancing String Literals Delimiters to Support Raw Text
 
  ## Swift 4.2
 
