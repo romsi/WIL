@@ -70,3 +70,7 @@ fastlane/test_output
 # Mac OS Deleted files
 
 .DS_Store
+
+# Temporary folder
+
+tmp/
