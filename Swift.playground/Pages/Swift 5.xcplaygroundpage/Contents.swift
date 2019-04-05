@@ -20,6 +20,15 @@ class Swift5Tests: XCTestCase {
             "My name is \"Romain\"."
         )
     }
+/*:
+ Raw strings treats now the backslash as being a literal character in the string, rather than an escape character.
+ */
+    func testRawStringWithBackslashes() {
+        XCTAssertEqual(
+            #"My name is \Romain."#,
+            "My name is \\Romain."
+        )
+    }
 }
 
 TestBuilder.run(tests: Swift5Tests()) { description, lineNumber in
