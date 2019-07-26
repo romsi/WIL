@@ -48,6 +48,29 @@ class Swift5Tests: XCTestCase {
             "\"The best iOS developers work for Night Shift\"#BeSolid"
         )
     }
+/*:
+ ## Conform Never to Equatable and Hashable
+ [SE-0215](https://github.com/apple/swift-evolution/blob/master/proposals/0215-conform-never-to-hashable-and-equatable.md) extended Never so it conforms to `Equatable` and `Hashable`.
+ 
+ Never is very useful for representing impossible code. Most people are familiar with it as the return type of functions like fatalError, but Never is also useful when working with generic classes.
+ 
+ For example, a Result type might use Never for its Value to represent something that always errors or use Never for its Error to represent something that never errors.
+ */
+    func testNetworkCallThatNeverFails() {
+        let data = #"{"email":"romain.asnar@gmail.com"}"#.data(using: .utf8)!
+        
+        func fetch(_ request: URLRequest,
+                   completion: (Result<Data, Never>) -> Void) {
+            completion(.success(data))
+        }
+        
+        let expectation = XCTestExpectation(description: "Fetch information about romsi.io.")
+        fetch(URLRequest(url: URL(string: "https://romsi.io")!)) { result in
+            XCTAssert(result == .success(data))
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 1)
+    }
 }
 
 TestBuilder.run(tests: Swift5Tests()) { description, lineNumber in
