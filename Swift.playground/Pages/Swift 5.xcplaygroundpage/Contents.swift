@@ -82,6 +82,20 @@ class Swift5Tests: XCTestCase {
         
         XCTAssertEqual(compactedDictionary, ["a": "1", "c": "3"])
     }
+/*:
+ ## Adding isMultiple to BinaryInteger
+  [SE-0225](https://github.com/apple/swift-evolution/blob/master/proposals/0225-binaryinteger-iseven-isodd-ismultiple.md) adds  `isEven`, `isOdd`, and `isMultiple` to the `BinaryInteger` protocol.
+ 
+ > Only `isMultiple(of:)` was approved during review, so the final implementation does not include `isEven` or `isOdd`. Two default implementations are provided in the standard library; one on `BinaryInteger` and one on `FixedWidthInteger` & `SignedInteger`. For concrete signed and unsigned fixed-size integers, like the standard library types, these two implementations should be nearly optimal.
+ */
+    func testAlternatingRowColor() {
+        let indexPath = IndexPath(row: 1, section: 0)
+        let cell = UITableViewCell()
+        
+        cell.contentView.backgroundColor = indexPath.row.isMultiple(of: 2) ? .gray : .white
+        
+        XCTAssertEqual(cell.contentView.backgroundColor, .white)
+    }
 }
 
 TestBuilder.run(tests: Swift5Tests()) { description, lineNumber in
