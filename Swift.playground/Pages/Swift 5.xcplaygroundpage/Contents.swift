@@ -135,6 +135,54 @@ extension Swift5Tests {
         XCTAssertEqual("\(token, truncater: TokenTruncater())", "5e2...")
     }
 }
+/*:
+ Let's create a truncater class that truncate email only and test it using my personal email.
+ */
+class EmailTruncater: Truncatable {
+    private let componentLenght: Int
+    private let trailing: String
+    init(componentLenght: Int = 3, trailing: String = "•••••") {
+        self.componentLenght = componentLenght
+        self.trailing = trailing
+    }
+    private func emailMatch(_ element: String) -> NSTextCheckingResult? {
+        let pattern = "(?<identifier>[A-Z0-9a-z._%+-]+)@(?<host>[A-Za-z0-9.-]+)\\.(?<extension>[A-Za-z]{2,64})"
+        guard let regex = try? NSRegularExpression(pattern: pattern, options: []) else {
+            return nil
+        }
+        let nsrange = NSRange(element.startIndex..<element.endIndex,
+                              in: element)
+        return regex.firstMatch(in: element, options: [], range: nsrange)
+    }
+    private func component(identifier: String, match: NSTextCheckingResult, element: String) -> String? {
+        let nsrange = match.range(withName: identifier)
+        guard nsrange.location != NSNotFound,
+            let range = Range(nsrange, in: element) else {
+                return nil
+        }
+        return String(element[range])
+    }
+    func truncate(element: String) -> String {
+        guard let match = emailMatch(element),
+            let identifier = component(identifier: "identifier", match: match, element: element),
+            let host = component(identifier: "host", match: match, element: element),
+            let ext = component(identifier: "extension", match: match, element: element) else {
+                return element
+        }
+        func truncateIfNeeded(_ element: String) -> String {
+            return ((element.count > componentLenght) ? element.prefix(componentLenght) + trailing : element)
+        }
+        return truncateIfNeeded(identifier)
+            + "@" + truncateIfNeeded(host)
+            + "." + truncateIfNeeded(ext)
+    }
+}
+extension Swift5Tests {
+    func testTruncateEmailWhenLogging() {
+        let token = "romain.asnar@gmail.com"
+        XCTAssertEqual("\(token, truncater: EmailTruncater())", "rom•••••@gma•••••.com")
+    }
+}
 
 TestBuilder.run(tests: Swift5Tests()) { description, lineNumber in
     assertionFailure(description, line: UInt(lineNumber))
