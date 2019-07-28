@@ -71,6 +71,17 @@ class Swift5Tests: XCTestCase {
         }
         wait(for: [expectation], timeout: 1)
     }
+/*:
+ ## Introduce compactMapValues to Dictionary
+     
+ [SE-0218](https://github.com/apple/swift-evolution/blob/master/proposals/0218-introduce-compact-map-values.md) adds a combined filter/map operation to Dictionary, as a companion to the mapValues and filter methods introduced by [SE-0165](https://github.com/apple/swift-evolution/blob/master/proposals/0165-dict.md). The new compactMapValues operation corresponds to compactMap on Sequence.
+ */
+    func testCompactMapValuesToDictionary() {
+        let dictionary: [String: String?] = ["a": "1", "b": nil, "c": "3"]
+        let compactedDictionary = dictionary.compactMapValues { $0 }
+        
+        XCTAssertEqual(compactedDictionary, ["a": "1", "c": "3"])
+    }
 }
 
 TestBuilder.run(tests: Swift5Tests()) { description, lineNumber in
