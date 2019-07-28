@@ -97,6 +97,44 @@ class Swift5Tests: XCTestCase {
         XCTAssertEqual(cell.contentView.backgroundColor, .white)
     }
 }
+/*:
+ ## Fix ExpressibleByStringInterpolation
+ [SE-0228](https://github.com/apple/swift-evolution/blob/master/proposals/0228-fix-expressiblebystringinterpolation.md) proposes a new design that improves `ExpressibleByStringInterpolation` performance, clarity, and efficiency.
+ 
+ Let's build a truncate string interpolation where we want to truncate tokens and emails in order to log it in our external logger.
+ */
+protocol Truncatable {
+    func truncate(element: String) -> String
+}
+extension DefaultStringInterpolation {
+    mutating func appendInterpolation(_ value: String,
+                                      truncater: Truncatable)
+    {
+        self.appendInterpolation(
+            truncater.truncate(element: value)
+        )
+    }
+}
+/*:
+ Let's create a truncater class that truncate token only and test it using a real generated token.
+ */
+class TokenTruncater: Truncatable {
+    private let lenght: Int
+    private let trailing: String
+    init(lenght: Int = 3, trailing: String = "...") {
+        self.lenght = lenght
+        self.trailing = trailing
+    }
+    func truncate(element: String) -> String {
+        return element.count > lenght ? element.prefix(lenght) + trailing : element
+    }
+}
+extension Swift5Tests {
+    func testTruncateTokenWhenLogging() {
+        let token = "5e2f842-e0c4-42d3-ae74-750407389118"
+        XCTAssertEqual("\(token, truncater: TokenTruncater())", "5e2...")
+    }
+}
 
 TestBuilder.run(tests: Swift5Tests()) { description, lineNumber in
     assertionFailure(description, line: UInt(lineNumber))
