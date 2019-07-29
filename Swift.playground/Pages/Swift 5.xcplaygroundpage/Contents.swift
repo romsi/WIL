@@ -197,6 +197,42 @@ extension Swift5Tests {
     }
 }
 /*:
+ ## Add Result to the Standard Library
+ 
+ [SE-0235](https://github.com/apple/swift-evolution/blob/master/proposals/0235-add-result.md) adds `Result` type commonly used for manual propagation and handling of errors in other languages and within the Swift community.
+
+ Most commonly, and seen in abundance when using Apple or Foundation APIs, Result can serve to unify the awkwardly disparate parameters seen in asynchronous completion handlers. For instance, URLSession's completion handlers take three optional parameters:
+ 
+     URLSession.shared.dataTask(with: url) { (data, response, error) in
+         guard error != nil else { return handleError(error!) }
+         guard let data = data, let response = response else { return } // Impossible?
+         handleResponse(response, data)
+     }
+ */
+extension URLSession {
+    func dataTask(with: URL, completion: ((Result<(response: URLResponse, data: Data), Error>) -> Void)) {
+        completion(.success((response: URLResponse(), data: Data())))
+    }
+}
+extension Swift5Tests {
+    func testResultTypeWhenPerformingAsynchronousAPICalls() {
+        let expectation = XCTestExpectation(description: "dataTask should get a valid response")
+        let handleResponse: ((URLResponse, Data) -> Void) = { _, _ in
+            expectation.fulfill()
+        }
+        let handleError: ((Error) -> Void) = { _ in }
+        URLSession.shared.dataTask(with: URL(string: "https://romsi.io")!) { (result: Result<(response: URLResponse, data: Data), Error>) in
+            switch result {
+            case let .success(success):
+                handleResponse(success.response, success.data)
+            case let .failure(error):
+                handleError(error)
+            }
+        }
+        wait(for: [expectation], timeout: 1)
+    }
+}
+/*:
  ## Execute Playground Tests
  
  To execute XCTest tests in playground file, you need to add a test observer and manually do assertion in case of failure.
