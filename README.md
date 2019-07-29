@@ -58,7 +58,6 @@ I tried Swift 5 new features in [Swift.playground](/Swift.playground) using `XCT
 - [SE-0218](https://github.com/apple/swift-evolution/blob/master/proposals/0218-introduce-compact-map-values.md): Introduce compactMapValues to Dictionary
 - [SE-0225](https://github.com/apple/swift-evolution/blob/master/proposals/0225-binaryinteger-iseven-isodd-ismultiple.md): Adding isMultiple to BinaryInteger
 - [SE-0228](https://github.com/apple/swift-evolution/blob/master/proposals/0228-fix-expressiblebystringinterpolation.md): Fix ExpressibleByStringInterpolation
-- [SE-0232](https://github.com/apple/swift-evolution/blob/master/proposals/0232-remove-customization-points.md): Remove Some Customization Points from the Standard Library’s Collection Hierarchy
 - [SE-0235](https://github.com/apple/swift-evolution/blob/master/proposals/0235-add-result.md): Add Result to the Standard Library
 - [SE-0239](https://github.com/apple/swift-evolution/blob/master/proposals/0239-codable-range.md): Add Codable conformance to Range types
 - [SE-0192](https://github.com/apple/swift-evolution/blob/master/proposals/0192-non-exhaustive-enums.md): Handling Future Enum Cases
