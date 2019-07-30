@@ -12,6 +12,8 @@
 struct Stack<Element> {
     fileprivate var elements: [Element] = []
     
+    var count: Int { return elements.count }
+    
     mutating func push(_ element: Element) {
         elements.append(element)
     }
@@ -48,3 +50,42 @@ stack.pop()
  
     A B +
  */
+enum Operator: Character, CaseIterable {
+    typealias RawValue = Character
+    case plus = "+"
+    init?(rawValue: Character) {
+        switch rawValue {
+        case "+":
+            self = .plus
+        default:
+            return nil
+        }
+    }
+}
+
+enum PostfixConverterError: Error {
+    case parsingFailed
+    case operatorFailed
+}
+
+func convertToPostfixNotation(expression: String) throws -> String {
+    var postfixExpression = ""
+    var operators = Stack<Operator>()
+    expression.forEach { c in
+        if let `operator` = Operator(rawValue: c) {
+            operators.push(`operator`)
+        }
+        else {
+            postfixExpression += String(c)
+        }
+    }
+    if postfixExpression.isEmpty && operators.count == 0 {
+        throw PostfixConverterError.parsingFailed
+    }
+    guard let `operator` = operators.pop()?.rawValue else {
+        throw PostfixConverterError.operatorFailed
+    }
+    return postfixExpression + " \(`operator`)"
+}
+
+try convertToPostfixNotation(expression: "A + B")
