@@ -233,6 +233,19 @@ extension Swift5Tests {
     }
 }
 /*:
+ There may be times where a developer wants to immediately execute a throwing function but otherwise delay handling the error until a later time. Currently, if they wish to preserve the error, they must break the value and error apart, as is typically seen in completion handlers.
+ */
+enum ResultError: Error, Equatable {
+    case throwError(String)
+}
+extension Swift5Tests {
+    func testResultTypeWhenContentsFileThrowsAnError() {
+        let result = Result { try String(contentsOfFile: "no_existing_file") }
+        XCTAssertEqual(result.mapError { ResultError.throwError($0.localizedDescription) },
+                       .failure(ResultError.throwError("The file “no_existing_file” couldn’t be opened because there is no such file.")))
+    }
+}
+/*:
  ## Execute Playground Tests
  
  To execute XCTest tests in playground file, you need to add a test observer and manually do assertion in case of failure.
