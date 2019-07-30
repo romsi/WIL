@@ -9,3 +9,27 @@
  
  Inserting at the beginning of an array is expensive, an O(n) operation, because it requires all existing array elements to be shifted in memory. Adding at the end is O(1); it always takes the same amount of time, regardless of the size of the array.
  */
+struct Stack<Element> {
+    fileprivate var elements: [Element] = []
+    
+    mutating func push(_ element: Element) {
+        elements.append(element)
+    }
+    
+    func pop() -> Element? {
+        guard let lastElement = elements.last else { return nil }
+        elements.dropLast()
+        return lastElement
+    }
+}
+extension Stack: CustomStringConvertible {
+    var description: String {
+        return "\(elements)>"
+    }
+}
+var stack = Stack<String>()
+stack.push("Hello")
+stack.push(" ")
+stack.push("World")
+stack.push("!")
+stack.pop()
