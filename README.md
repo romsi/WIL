@@ -11,6 +11,7 @@ Stay ahead of the best programming practices.
 		- [Swift 4.2](#swift-4.2)
 	- [Prototyping](#prototyping)
 		- [User Interface](#user-interface)
+- [Algorithm](#algorithm)
 - [Design Pattern](#design-pattern)
 	- [Visitor](#visitor)
 - [Requirements](#requirements)
@@ -80,6 +81,28 @@ Apple describes Xcode Playgrounds as follow:
 Recently during the WWDC 2018, [Apple team presents major advancements in Xcode playgrounds](https://developer.apple.com/videos/play/wwdc2018/402/). Learn advanced tips and techniques, hear about new and often overlooked workflows, and rediscover the tools provided when coding in playgrounds.
 
 Check out the `User Intrerface` page on my [Prototyping playground file](/Prototyping.playground) where I use storyboards and Xcode playgrounds to build prototypes of my personal app.
+
+## Algorithm & Data Structure
+
+In computer science, an algorithm is a set of instructions, typically to solve a class of problems or perform a computation. Algorithms are unambiguous specifications for performing calculation, data processing, automated reasoning, and other tasks.
+
+The goal is to describe how algorithms work. The focus is on clarity and readability of the code, not on making a reusable library that you can drop into projects.
+
+Knowing a little bit about the strategies used by algorithms to solve tricky problems gives ideas for improvements that can be done in your own code.
+
+Knowing more data structures than just the standard array and dictionary gives you a bigger collection of tools to build apps.
+
+### Stack
+
+A stack is like an array but with limited functionality. You can only push to add a new element to the top of the stack, pop to remove the element from the top, and peek at the top element without popping it off.
+
+Why would you want to do this? Well, in many algorithms you want to add objects to a temporary list at some point and then pull them off this list again at a later time. Often the order in which you add and remove these objects matters.
+
+A stack gives you a LIFO or last-in first-out order. The element you pushed last is the first one to come off with the next pop.
+
+Inserting at the beginning of an array is expensive, an O(n) operation, because it requires all existing array elements to be shifted in memory. Adding at the end is O(1); it always takes the same amount of time, regardless of the size of the array.
+
+Check out the `Stack` page on my [Data Structure playground file](/Data%20Structure.plaground) where I convert infix to postfix expression using stacks.
 
 ## Design Pattern
 
