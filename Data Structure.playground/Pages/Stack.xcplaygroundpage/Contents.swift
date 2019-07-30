@@ -33,3 +33,18 @@ stack.push(" ")
 stack.push("World")
 stack.push("!")
 stack.pop()
+/*:
+ ## Conversion of Infix expression to Postfix expression
+ 
+ Infix notation is the notation commonly used in arithmetical and logical formulae and statements. It is characterized by the placement of operators between operands —"infixed operators"— such as the plus sign in 2 + 2.
+ 
+ Postfix notation is a mathematical notation in which operators follow their operands, in contrast to infix notation.
+ 
+ Let’s consider the following infix expression.
+ 
+    A + B
+ 
+ We would like to transform it to the following postfix expression using stacks.
+ 
+    A B +
+ */
