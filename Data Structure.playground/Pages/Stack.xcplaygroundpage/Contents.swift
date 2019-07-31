@@ -89,3 +89,12 @@ func convertToPostfixNotation(expression: String) throws -> String {
 }
 
 try convertToPostfixNotation(expression: "A + B")
+/*:
+ Let’s convert a little complex expression with parentheses.
+ 
+     ( ( A + B ) — C * ( D / E ) ) + F
+ 
+ The final postfix expression should be:
+ 
+     A B + C D E / * - F +
+ */
