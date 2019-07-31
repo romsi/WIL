@@ -12,6 +12,7 @@ Stay ahead of the best programming practices.
 	- [Prototyping](#prototyping)
 		- [User Interface](#user-interface)
 - [Algorithm](#algorithm)
+	- [Quicksort](#quicksort)
 - [Design Pattern](#design-pattern)
 	- [Visitor](#visitor)
 - [Requirements](#requirements)
@@ -103,6 +104,14 @@ A stack gives you a LIFO or last-in first-out order. The element you pushed last
 Inserting at the beginning of an array is expensive, an O(n) operation, because it requires all existing array elements to be shifted in memory. Adding at the end is O(1); it always takes the same amount of time, regardless of the size of the array.
 
 Check out the `Stack` page on my [Data Structure playground file](/Data%20Structure.plaground) where I convert infix to postfix expression using stacks.
+
+### Quicksort
+ 
+Quicksort is an efficient sorting algorithm, serving as a systematic method for placing the elements of a random access file or an array in order. Developed by British computer scientist Tony Hoare in 1959 and published in 1961, it is still a commonly used algorithm for sorting. When implemented well, it can be about two or three times faster than its main competitors, merge sort and heapsort.
+ 
+Mathematical analysis of quicksort shows that, on average, the algorithm takes O(n log n) comparisons to sort n items. In the worst case, it makes O(n2) comparisons, though this behavior is rare.
+
+Check out the `Stack` page on my [Algorithm playground file](/Algorithm.plaground) where I sort a list of ordered item by date.
 
 ## Design Pattern
 
