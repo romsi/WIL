@@ -27,3 +27,7 @@ func quicksort<T: Comparable>(_ a: [T]) -> [T] {
 }
 let list = [ 10, 0, 3, 9, 2, 14, 8, 27, 1, 5, 8, -1, 26 ]
 quicksort(list)
+/*:
+ Using this basic implementation of quicksort the performance could be up to O(n^2), which is bad.
+ Choosing good pivots on average, for example by using a random number generator, Lumuto's partitioning or Hoare's partitioning, the expected running time becomes O(n log n), which is as good as sorting algorithms get.
+ */
