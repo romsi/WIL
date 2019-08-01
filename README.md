@@ -113,6 +113,15 @@ Mathematical analysis of quicksort shows that, on average, the algorithm takes O
 
 Check out the `Stack` page on my [Algorithm playground file](/Algorithm.plaground) where I sort a list of ordered item by date.
 
+### Binary Search Tree
+
+Binary search trees (BST), sometimes called ordered or sorted binary trees, are a particular type of container: a data structure that stores "items" (such as numbers, names etc.) in memory. They allow fast lookup, addition and removal of items, and can be used to implement either dynamic sets of items, or lookup tables that allow finding an item by its key.
+
+Mathematical analysis of binary search tree shows that, on average, the algorithm takes O(log n). In the worst case, it makes O(n) when the unbalanced tree resembles a linked list (degenerate tree).
+
+Check out the `Binary Search Tree` page on my [Algorithm playground file](/Algorithm.plaground) where I search the phone number of a person by name.
+
+
 ## Design Pattern
 
 > [A Design Pattern is a named canonical form for a combination of software structures and procedures that have proven to be useful over the years.](https://blog.cleancoder.com/uncle-bob/2014/06/30/ALittleAboutPatterns.html) — Robert C. Martin
