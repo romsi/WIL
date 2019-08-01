@@ -3,5 +3,6 @@
     <pages>
         <page name='Table Of Content'/>
         <page name='Quicksort'/>
+        <page name='Binary Search Tree'/>
     </pages>
 </playground>
